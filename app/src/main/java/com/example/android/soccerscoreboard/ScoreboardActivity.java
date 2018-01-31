@@ -11,31 +11,15 @@ public class ScoreboardActivity extends AppCompatActivity {
 
     private Scoreboard scoreboard;
 
-    /**
-     *  Fields :
-     *
-     *  - home_score_field
-     *  - guest_score_field
-     *  - home_fouls_field
-     *  - home_yellows_field
-     *  - home_reds_fields
-     *  - guest_fouls_field
-     *  - guest_yellows_field
-     *  - guest_reds_field
-     */
-
-    /**
-     *  Buttons
-     *
-     *  - home_score_button
-     *  - guest_score_button
-     *  - home_fouls_button
-     *  - home_yellows_button
-     *  - home_reds_button
-     *  - guest_fouls_button
-     *  - guest_yellows_button
-     *  - guest_reds_button
-     */
+    //TextViews frequently updated on screen
+    TextView homeScore;
+    TextView guestScore;
+    TextView homeFouls;
+    TextView homeYellowCards;
+    TextView homeRedCards;
+    TextView guestFouls;
+    TextView guestYellowCards;
+    TextView guestRedCards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +27,49 @@ public class ScoreboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scoreboard);
 
         scoreboard = new Scoreboard();
+
+        loadTextViewsRef();
         displayAllStatistics();
+    }
+
+    /**
+     * This method, called once at the application startup, retrieves all the object references for
+     * those text views, shown on this activity, which will be frequently updated
+     */
+    private void loadTextViewsRef(){
+        TextView value;
+
+        //Home score TextView
+        value = (TextView) findViewById(R.id.home_score_field);
+        homeScore = value;
+
+        //Guest score TextView
+        value = (TextView) findViewById(R.id.guest_score_field);
+        guestScore = value;
+
+        //Home fouls TextView
+        value = (TextView) findViewById(R.id.home_fouls_field);
+        homeFouls = value;
+
+        //Home yellow cards TextView
+        value = (TextView) findViewById(R.id.home_yellows_field);
+        homeYellowCards = value;
+
+        //Home red cards TextView
+        value = (TextView) findViewById(R.id.home_reds_field);
+        homeRedCards = value;
+
+        //Guest fouls TextView
+        value = (TextView) findViewById(R.id.guest_fouls_field);
+        guestFouls = value;
+
+        //Guest yellow cards TextView
+        value = (TextView) findViewById(R.id.guest_yellows_field);
+        guestYellowCards = value;
+
+        //Guest red cards TextView
+        value = (TextView) findViewById(R.id.guest_reds_field);
+        guestRedCards = value;
     }
 
     /**
@@ -64,72 +90,56 @@ public class ScoreboardActivity extends AppCompatActivity {
      * This method displays the score for the Home team
      */
     private void displayScoreForHomeTeam(){
-        TextView textView = (TextView) findViewById(R.id.home_score_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getHomeTeamScore()));
+        homeScore.setText(String.valueOf(this.scoreboard.getHomeTeamScore()));
     }
 
     /**
      * This method displays the score for the Guest team
      */
     private void displayScoreForGuestTeam(){
-        TextView textView = (TextView) findViewById(R.id.guest_score_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getGuestTeamScore()));
+        guestScore.setText(String.valueOf(this.scoreboard.getGuestTeamScore()));
     }
 
     /**
      * This method displays the fouls for the Home team
      */
     private void displayFoulsForHomeTeam(){
-        TextView textView = (TextView) findViewById(R.id.home_fouls_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getHomeTeamFouls()));
+        homeFouls.setText(String.valueOf(this.scoreboard.getHomeTeamFouls()));
     }
 
     /**
      * This method displays the fouls for the Guest team
      */
     private void displayFoulsForGuestTeam(){
-        TextView textView = (TextView) findViewById(R.id.guest_fouls_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getGuestTeamFouls()));
+        guestFouls.setText(String.valueOf(this.scoreboard.getGuestTeamFouls()));
     }
 
     /**
      * This method displays the yellow cards for the Home team
      */
     private void displayYellowsForHomeTeam(){
-        TextView textView = (TextView) findViewById(R.id.home_yellows_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getHomeTeamYellows()));
+        homeYellowCards.setText(String.valueOf(this.scoreboard.getHomeTeamYellows()));
     }
 
     /**
      * This method displays the yellow cards for the Guest team
      */
     private void displayYellowsForGuestTeam(){
-        TextView textView = (TextView) findViewById(R.id.guest_yellows_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getGuestTeamYellows()));
+        guestYellowCards.setText(String.valueOf(this.scoreboard.getGuestTeamYellows()));
     }
 
     /**
      * This method displays the red cards for the Home team
      */
     private void displayRedsForHomeTeam(){
-        TextView textView = (TextView) findViewById(R.id.home_reds_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getHomeTeamReds()));
+        homeRedCards.setText(String.valueOf(this.scoreboard.getHomeTeamReds()));
     }
 
     /**
      * This method displays the red cards for the Guest team
      */
     private void displayRedsForGuestTeam(){
-        TextView textView = (TextView) findViewById(R.id.guest_reds_field);
-
-        textView.setText(String.valueOf(this.scoreboard.getGuestTeamReds()));
+        guestRedCards.setText(String.valueOf(this.scoreboard.getGuestTeamReds()));
     }
 
     /**
