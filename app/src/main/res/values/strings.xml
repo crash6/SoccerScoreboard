@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Soccer Scoreboard</string>
+
+    <string name="home_label">home</string>
+    <string name="guest_label">guest</string>
+    <string name="score_label">goals</string>
+    <string name="sp_fouls_label">f</string>
+    <string name="sp_yellows_label">y</string>
+    <string name="sp_reds_label">r</string>
+    <string name="increase_button_label">+</string>
+    <string name="reset_button_text">reset</string>
+
+    <string name="data_field_value">000</string>
+
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3A51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="screenColor">#E0E0E0</color>
+
+    <color name="panelColor">#34515E</color>
+    <color name="panelCaptionColor">#FFFFFF</color>
+    <color name="panelLabelColor">#FFFFFF</color>
+    <color name="panelDataFieldColor">#F44336</color>
+
+    <color name="buttonPanelColor">@android:color/transparent</color>
+    <color name="buttonPanelColorClicked">@android:color/black</color>
+    <color name="buttonPanelBorderColor">#FFFFFF</color>
+    <color name="buttonPanelFontColor">#FFFFFF</color>
+
+    <color name="resetButtonColor">#34515E</color>
+    <color name="resetButtonColorClicked">@android:color/black</color>
+    <color name="resetButtonFontColor">#FFFFFF</color>
+
+</resources>

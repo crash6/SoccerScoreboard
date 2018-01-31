@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This file provides the click effect to the buttons on all panels-->
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/buttonPanelColorClicked" />
+            <corners android:radius="@dimen/panel_button_border_radius" />
+            <stroke android:width="@dimen/panel_button_border_size"
+                    android:color="@color/buttonPanelBorderColor" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/buttonPanelColor" />
+            <corners android:radius="@dimen/panel_button_border_radius" />
+            <stroke android:width="@dimen/panel_button_border_size" android:color="@color/buttonPanelBorderColor" />
+        </shape>
+    </item>
+
+</selector>

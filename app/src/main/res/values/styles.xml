@@ -1,0 +1,169 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <!-- Style applied to the main layout shown on screen -->
+    <style name="MainLayoutAppearance" parent="AppTheme">
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">match_parent</item>
+            <item name="android:orientation">vertical</item>
+            <item name="android:background">@color/screenColor</item>
+    </style>
+
+    <!-- Style applied to score panel shown on screen -->
+    <style name="PanelAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/panel_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/panel_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/panel_margin_right</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/panel_background</item>
+    </style>
+
+    <!-- Style applied to each column of a panel -->
+    <style name="PanelColumnAppearance" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Style applied to each sub panel contained within the column panel -->
+    <style name="SubPanelAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Style applied to each top label of a column panel -->
+    <style name="TopLabelAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/top_label_padding_top</item>
+        <item name="android:paddingBottom">@dimen/top_label_padding_bottom</item>
+        <item name="android:textSize">@dimen/top_label_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/panelLabelColor</item>
+    </style>
+
+    <!-- Style applied to each bottom label of a column panel -->
+    <style name="BottomLabelAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/bottom_label_padding_top</item>
+        <item name="android:paddingBottom">@dimen/bottom_label_padding_bottom</item>
+        <item name="android:textSize">@dimen/bottom_label_font_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/panelLabelColor</item>
+    </style>
+
+    <!-- Style applied to data field shown in the sub panel -->
+    <style name="DataFieldAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/data_field_padding_top</item>
+        <item name="android:paddingBottom">@dimen/data_field_padding_bottom</item>
+        <item name="android:textSize">@dimen/data_field_font_size</item>
+        <item name="android:textColor">@color/panelDataFieldColor</item>
+    </style>
+
+    <!-- Style applied to buttons placed on each sub panel -->
+    <style name="PanelButtonAppearance" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/panel_button_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/buttonPanelFontColor</item>
+        <item name="android:background">@drawable/panel_button_click_effect</item>
+    </style>
+
+    <!-- Style applied to the caption of the statistics panel -->
+    <style name="StatisticsPanelCaptionAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/panelCaptionColor</item>
+        <item name="android:textSize">@dimen/statistics_panel_caption_font_size</item>
+        <item name="android:layout_marginTop">@dimen/statistics_panel_caption_margin_top</item>
+    </style>
+
+    <!-- Style applied to the statistics panel -->
+    <style name="StatisticsPanelAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/panel_background</item>
+        <item name="android:layout_marginTop">@dimen/panel_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/panel_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/panel_margin_right</item>
+    </style>
+
+    <!-- Style applied to the statistics sub panel -->
+    <style name="StatisticsSubPanelAppearance" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/statistics_sub_panel_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/statistics_sub_panel_margin_right</item>
+    </style>
+
+    <!-- Style applied to the statistics row panel -->
+    <style name="StatisticsRowPanelAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- Style applied to the label of the statistics row panel -->
+    <style name="StatisticsRowPanelLabelAppearance" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/panelLabelColor</item>
+        <item name="android:textSize">@dimen/statistics_row_panel_label_font_size</item>
+        <item name="android:layout_weight">0.2</item>
+    </style>
+
+    <!-- Style applied to the data field of the statistics row panel -->
+    <style name="StatisticsRowPanelDataFieldAppearance" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/panelDataFieldColor</item>
+        <item name="android:textSize">@dimen/statistics_row_panel_data_field_font_size</item>
+        <item name="android:layout_weight">0.5</item>
+    </style>
+
+    <!-- Style applied to the button of the statistics row panel -->
+    <style name="StatisticsRowPanelButtonAppearance" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/buttonPanelFontColor</item>
+        <item name="android:textSize">@dimen/statistics_row_panel_button_font_size</item>
+        <item name="android:layout_marginTop">@dimen/statistics_panel_button_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/statistics_panel_button_margin_bottom</item>
+        <item name="android:background">@drawable/panel_button_click_effect</item>
+        <item name="android:layout_weight">0.3</item>
+    </style>
+
+    <!-- Style applied to the specific Reset button -->
+    <style name="ResetButtonAppearance" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/reset_button_margin</item>
+        <item name="android:textSize">@dimen/reset_button_font_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/resetButtonFontColor</item>
+        <item name="android:background">@drawable/reset_button_click_effect</item>
+    </style>
+</resources>

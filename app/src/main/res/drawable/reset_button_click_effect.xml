@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This file provides the click effect to the reset button-->
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/resetButtonColorClicked" />
+            <corners android:radius="@dimen/reset_button_border_radius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/resetButtonColor" />
+            <corners android:radius="@dimen/reset_button_border_radius" />
+        </shape>
+
+    </item>
+
+</selector>
