@@ -1,284 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout style="@style/MainLayoutAppearance"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.soccerscoreboard.ScoreboardActivity"
+    android:layout_width="match_parent"
 
-    android:id="@+id/main_layout">
+    android:layout_height="match_parent"
+    tools:context="com.example.android.soccerscoreboard.ScoreboardActivity">
 
-    <!-- Score panel -->
-    <LinearLayout style="@style/PanelAppearance"
-        android:id="@+id/scores_panel">
 
-        <!-- Home score column-->
-        <LinearLayout style="@style/PanelColumnAppearance"
-            android:id="@+id/home_score_panel">
+    <LinearLayout
+        android:id="@+id/main_layout"
+        style="@style/MainLayoutAppearance">
 
-            <TextView style="@style/TopLabelAppearance"
-                android:id="@+id/home_score_top_label"
-                android:textAlignment="center"
-                android:fontFamily="@font/orbitron_bold"
-                android:text="@string/home_label"
-                />
+        <!-- Score panel -->
+        <LinearLayout
+            android:id="@+id/scores_panel"
+            style="@style/PanelAppearance">
 
-            <LinearLayout style="@style/SubPanelAppearance"
-                android:id="@+id/home_score_subpanel">
+            <!-- Home score column-->
+            <LinearLayout
+                android:id="@+id/home_score_panel"
+                style="@style/PanelColumnAppearance">
 
-                <TextView style="@style/DataFieldAppearance"
-                    android:id="@+id/home_score_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/PanelButtonAppearance"
-                    android:id="@+id/home_score_button"
+                <TextView
+                    android:id="@+id/home_score_top_label"
+                    style="@style/TopLabelAppearance"
                     android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateHomeTeamScore"
-                    />
+                    android:text="@string/home_label"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:id="@+id/home_score_subpanel"
+                    style="@style/SubPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/home_score_field"
+                        style="@style/DataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/home_score_button"
+                        style="@style/PanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateHomeTeamScore"
+                        android:text="@string/increase_button_label" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/home_score_bottom_label"
+                    style="@style/BottomLabelAppearance"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="@string/score_label"
+                    android:textAlignment="center" />
 
             </LinearLayout>
 
-            <TextView style="@style/BottomLabelAppearance"
-                android:id="@+id/home_score_bottom_label"
-                android:textAlignment="center"
-                android:fontFamily="@font/orbitron_medium"
-                android:text="@string/score_label"
-                />
+            <!-- Guest score column-->
+            <LinearLayout
+                android:id="@+id/guest_score_panel"
+                style="@style/PanelColumnAppearance">
 
-        </LinearLayout>
-
-        <!-- Guest score column-->
-        <LinearLayout style="@style/PanelColumnAppearance"
-            android:id="@+id/guest_score_panel">
-
-            <TextView style="@style/TopLabelAppearance"
-                android:id="@+id/guest_score_top_label"
-                android:textAlignment="center"
-                android:fontFamily="@font/orbitron_bold"
-                android:text="@string/guest_label"
-                />
-
-            <LinearLayout style="@style/SubPanelAppearance"
-                android:id="@+id/guest_score_subpanel">
-
-                <TextView style="@style/DataFieldAppearance"
-                    android:id="@+id/guest_score_field"
-                    android:textAlignment="center"
-                    android:text="@string/data_field_value"
-                    android:fontFamily="@font/lcd_font"
-                    />
-
-                <Button style="@style/PanelButtonAppearance"
-                    android:id="@+id/guest_score_button"
+                <TextView
+                    android:id="@+id/guest_score_top_label"
+                    style="@style/TopLabelAppearance"
                     android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateGuestTeamScore"
-                    />
+                    android:text="@string/guest_label"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:id="@+id/guest_score_subpanel"
+                    style="@style/SubPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/guest_score_field"
+                        style="@style/DataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/guest_score_button"
+                        style="@style/PanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateGuestTeamScore"
+                        android:text="@string/increase_button_label" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/guest_score_bottom_label"
+                    style="@style/BottomLabelAppearance"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="@string/score_label"
+                    android:textAlignment="center" />
 
             </LinearLayout>
 
-            <TextView style="@style/BottomLabelAppearance"
-                android:id="@+id/guest_score_bottom_label"
-                android:textAlignment="center"
-                android:fontFamily="@font/orbitron_medium"
-                android:text="@string/score_label"
-                />
+        </LinearLayout>
+
+        <!-- Statistics panel -->
+        <LinearLayout
+            android:id="@+id/statistics_panel"
+            style="@style/StatisticsPanelAppearance">
+
+            <!-- Home statistics panel -->
+            <LinearLayout
+                android:id="@+id/home_statistics_panel"
+                style="@style/StatisticsSubPanelAppearance">
+
+
+                <TextView
+                    android:id="@+id/home_statistics_panel_caption"
+                    style="@style/StatisticsPanelCaptionAppearance"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:text="@string/home_label"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:id="@+id/home_statistics_panel_fouls_row"
+                    style="@style/StatisticsRowPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/home_fouls_label"
+                        style="@style/StatisticsRowPanelLabelAppearance"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="@string/sp_fouls_label"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/home_fouls_field"
+                        style="@style/StatisticsRowPanelDataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/home_fouls_button"
+                        style="@style/StatisticsRowPanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateHomeTeamFouls"
+                        android:text="@string/increase_button_label" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_statistics_panel_yellows_row"
+                    style="@style/StatisticsRowPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/home_yellows_label"
+                        style="@style/StatisticsRowPanelLabelAppearance"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="@string/sp_yellows_label"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/home_yellows_field"
+                        style="@style/StatisticsRowPanelDataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/home_yellows_button"
+                        style="@style/StatisticsRowPanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateHomeTeamYellows"
+                        android:text="@string/increase_button_label" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_statistics_panel_reds_row"
+                    style="@style/StatisticsRowPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/home_reds_label"
+                        style="@style/StatisticsRowPanelLabelAppearance"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="@string/sp_reds_label"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/home_reds_field"
+                        style="@style/StatisticsRowPanelDataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/home_reds_button"
+                        style="@style/StatisticsRowPanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateHomeTeamReds"
+                        android:text="@string/increase_button_label" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Guest statistics panel -->
+            <LinearLayout
+                android:id="@+id/guest_statistics_panel"
+                style="@style/StatisticsSubPanelAppearance">
+
+                <TextView
+                    android:id="@+id/guest_statistics_panel_caption"
+                    style="@style/StatisticsPanelCaptionAppearance"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:text="@string/guest_label"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:id="@+id/guest_statistics_panel_fouls_row"
+                    style="@style/StatisticsRowPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/guest_fouls_label"
+                        style="@style/StatisticsRowPanelLabelAppearance"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="@string/sp_fouls_label"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/guest_fouls_field"
+                        style="@style/StatisticsRowPanelDataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/guest_fouls_button"
+                        style="@style/StatisticsRowPanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateGuestTeamFouls"
+                        android:text="@string/increase_button_label" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/guest_statistics_panel_yellows_row"
+                    style="@style/StatisticsRowPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/guest_yellows_label"
+                        style="@style/StatisticsRowPanelLabelAppearance"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="@string/sp_yellows_label"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/guest_yellows_field"
+                        style="@style/StatisticsRowPanelDataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/guest_yellows_button"
+                        style="@style/StatisticsRowPanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateGuestTeamYellows"
+                        android:text="@string/increase_button_label" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/guest_statistics_panel_reds_row"
+                    style="@style/StatisticsRowPanelAppearance">
+
+                    <TextView
+                        android:id="@+id/guest_reds_label"
+                        style="@style/StatisticsRowPanelLabelAppearance"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="@string/sp_reds_label"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/guest_reds_field"
+                        style="@style/StatisticsRowPanelDataFieldAppearance"
+                        android:fontFamily="@font/lcd_font"
+                        android:text="@string/data_field_value"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/guest_reds_button"
+                        style="@style/StatisticsRowPanelButtonAppearance"
+                        android:fontFamily="@font/orbitron_bold"
+                        android:onClick="updateGuestTeamReds"
+                        android:text="@string/increase_button_label" />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            style="@style/ResetButtonAppearance"
+            android:fontFamily="@font/orbitron_medium"
+            android:onClick="resetScoreboard"
+            android:text="@string/reset_button_text" />
+
 
     </LinearLayout>
-
-    <!-- Statistics panel -->
-    <LinearLayout style="@style/StatisticsPanelAppearance"
-        android:id="@+id/statistics_panel">
-
-        <!-- Home statistics panel -->
-        <LinearLayout style="@style/StatisticsSubPanelAppearance"
-            android:id="@+id/home_statistics_panel">
-
-
-            <TextView style="@style/StatisticsPanelCaptionAppearance"
-                android:id="@+id/home_statistics_panel_caption"
-                android:textAlignment="center"
-                android:fontFamily="@font/orbitron_bold"
-                android:text="@string/home_label"
-                />
-
-            <LinearLayout style="@style/StatisticsRowPanelAppearance"
-                android:id="@+id/home_statistics_panel_fouls_row">
-
-                <TextView style="@style/StatisticsRowPanelLabelAppearance"
-                    android:id="@+id/home_fouls_label"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/orbitron_medium"
-                    android:text="@string/sp_fouls_label"
-                    />
-
-                <TextView style="@style/StatisticsRowPanelDataFieldAppearance"
-                    android:id="@+id/home_fouls_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/StatisticsRowPanelButtonAppearance"
-                    android:id="@+id/home_fouls_button"
-                    android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateHomeTeamFouls"
-                    />
-            </LinearLayout>
-
-            <LinearLayout style="@style/StatisticsRowPanelAppearance"
-                android:id="@+id/home_statistics_panel_yellows_row">
-
-                <TextView style="@style/StatisticsRowPanelLabelAppearance"
-                    android:id="@+id/home_yellows_label"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/orbitron_medium"
-                    android:text="@string/sp_yellows_label"
-                    />
-
-                <TextView style="@style/StatisticsRowPanelDataFieldAppearance"
-                    android:id="@+id/home_yellows_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/StatisticsRowPanelButtonAppearance"
-                    android:id="@+id/home_yellows_button"
-                    android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateHomeTeamYellows"
-                    />
-            </LinearLayout>
-
-            <LinearLayout style="@style/StatisticsRowPanelAppearance"
-                android:id="@+id/home_statistics_panel_reds_row">
-
-                <TextView style="@style/StatisticsRowPanelLabelAppearance"
-                    android:id="@+id/home_reds_label"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/orbitron_medium"
-                    android:text="@string/sp_reds_label"
-                    />
-
-                <TextView style="@style/StatisticsRowPanelDataFieldAppearance"
-                    android:id="@+id/home_reds_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/StatisticsRowPanelButtonAppearance"
-                    android:id="@+id/home_reds_button"
-                    android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateHomeTeamReds"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Guest statistics panel -->
-        <LinearLayout style="@style/StatisticsSubPanelAppearance"
-            android:id="@+id/guest_statistics_panel">
-
-            <TextView style="@style/StatisticsPanelCaptionAppearance"
-                android:id="@+id/guest_statistics_panel_caption"
-                android:textAlignment="center"
-                android:fontFamily="@font/orbitron_bold"
-                android:text="@string/guest_label"
-                />
-
-            <LinearLayout style="@style/StatisticsRowPanelAppearance"
-                android:id="@+id/guest_statistics_panel_fouls_row">
-
-                <TextView style="@style/StatisticsRowPanelLabelAppearance"
-                    android:id="@+id/guest_fouls_label"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/orbitron_medium"
-                    android:text="@string/sp_fouls_label"
-                    />
-
-                <TextView style="@style/StatisticsRowPanelDataFieldAppearance"
-                    android:id="@+id/guest_fouls_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/StatisticsRowPanelButtonAppearance"
-                    android:id="@+id/guest_fouls_button"
-                    android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateGuestTeamFouls"
-                    />
-            </LinearLayout>
-
-            <LinearLayout style="@style/StatisticsRowPanelAppearance"
-                android:id="@+id/guest_statistics_panel_yellows_row">
-
-                <TextView style="@style/StatisticsRowPanelLabelAppearance"
-                    android:id="@+id/guest_yellows_label"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/orbitron_medium"
-                    android:text="@string/sp_yellows_label"
-                    />
-
-                <TextView style="@style/StatisticsRowPanelDataFieldAppearance"
-                    android:id="@+id/guest_yellows_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/StatisticsRowPanelButtonAppearance"
-                    android:id="@+id/guest_yellows_button"
-                    android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateGuestTeamYellows"
-                    />
-            </LinearLayout>
-
-            <LinearLayout style="@style/StatisticsRowPanelAppearance"
-                android:id="@+id/guest_statistics_panel_reds_row">
-
-                <TextView style="@style/StatisticsRowPanelLabelAppearance"
-                    android:id="@+id/guest_reds_label"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/orbitron_medium"
-                    android:text="@string/sp_reds_label"
-                    />
-
-                <TextView style="@style/StatisticsRowPanelDataFieldAppearance"
-                    android:id="@+id/guest_reds_field"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/lcd_font"
-                    android:text="@string/data_field_value"
-                    />
-
-                <Button style="@style/StatisticsRowPanelButtonAppearance"
-                    android:id="@+id/guest_reds_button"
-                    android:fontFamily="@font/orbitron_bold"
-                    android:text="@string/increase_button_label"
-                    android:onClick="updateGuestTeamReds"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button style="@style/ResetButtonAppearance"
-        android:fontFamily="@font/orbitron_medium"
-        android:text="@string/reset_button_text"
-        android:onClick="resetScoreboard"
-        />
-
-
-
-</LinearLayout>
+</ScrollView>
