@@ -13,7 +13,7 @@
         <activity android:name=".ScoreboardActivity">
 
            <!-- This setting is used to avoid the 'portrait mode' -->
-           <!-- android:screenOrientation="portrait"-->
+           <!-- android:screenOrientation="portrait" -->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

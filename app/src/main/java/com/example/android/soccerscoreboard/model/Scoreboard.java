@@ -9,10 +9,26 @@ public class Scoreboard {
     private TeamMatchStatistics _homeTeamStat  ; //Match statistics for the Home team
     private TeamMatchStatistics _guestTeamStat ; //Match statistics for the Guest team
 
+    private static Scoreboard mScoreboard;
+
+    /**
+     * This method used the pattern Singleton to create a single reference for this class
+     * @return reference to an object Scoreboard
+     */
+    public static Scoreboard create(){
+        if(mScoreboard != null){
+            return mScoreboard;
+        }
+
+        mScoreboard = new Scoreboard();
+        return mScoreboard;
+    }
+
+
     /**
      * Constructor method for the Scoreboard
      */
-    public Scoreboard(){
+    private Scoreboard(){
         _homeTeamStat  = new TeamMatchStatistics();
         _guestTeamStat = new TeamMatchStatistics();
     }

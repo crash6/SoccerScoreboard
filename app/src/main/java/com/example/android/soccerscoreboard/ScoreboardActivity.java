@@ -24,9 +24,12 @@ public class ScoreboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_scoreboard);
 
-        scoreboard = new Scoreboard();
+        //This line avoid the problem of screen rotation, in the sense that when the screen is
+        //rotated, the reference to the scoreboard is restored
+        scoreboard = Scoreboard.create();
 
         loadTextViewsRef();
         displayAllStatistics();
